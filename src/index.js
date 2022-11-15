@@ -49,6 +49,18 @@ function beolvas() {
             }
             console.log(lengthList.join());
         });
+        const beirtNevBtn = document.getElementById('quoteNumBtn');
+        beirtNevBtn === null || beirtNevBtn === void 0 ? void 0 : beirtNevBtn.addEventListener('click', function quoteNumOf() {
+            const beirnevNev = document.getElementById('beirtnev');
+            let quoteNumAll = 0;
+            for (let i = 0; i < vals.quotes.length; i++) {
+                if (vals.quotes[i].author == beirnevNev.value) {
+                    console.log();
+                    quoteNumAll++;
+                    console.log(quoteNumAll);
+                }
+            }
+        });
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
