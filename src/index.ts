@@ -50,6 +50,7 @@ async function beolvas(){
 
         let lengthList: number[] = [];
         
+
         for(let i = 0; i <  vals.quotes.length; i++){
             //console.log(vals.quotes[i])
             let lengthofcurrent = vals.quotes[i].quote.length;
@@ -60,6 +61,7 @@ async function beolvas(){
     })
 
 }
+
 
 
 
