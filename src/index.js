@@ -8,21 +8,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const allQuoteBtn = document.getElementById('osszesIdezetGomb');
+allQuoteBtn === null || allQuoteBtn === void 0 ? void 0 : allQuoteBtn.addEventListener('click', function ListAllQuote() {
+});
 function beolvas() {
     return __awaiter(this, void 0, void 0, function* () {
         let response = yield fetch("../quotes.json");
         let vals = yield response.json();
         console.log(vals.quotes);
-        vals.quotes.sort(function (a, b) {
-            if (a.author < b.author) {
-                return -1;
-            }
-            if (a.author > b.author) {
-                return 1;
-            }
-            return 0;
+        const allQuoteBtn = document.getElementById('osszesIdezetGomb');
+        allQuoteBtn === null || allQuoteBtn === void 0 ? void 0 : allQuoteBtn.addEventListener('click', function ListAllQuote() {
+            vals.quotes.sort(function (a, b) {
+                if (a.author < b.author) {
+                    return -1;
+                }
+                if (a.author > b.author) {
+                    return 1;
+                }
+                return 0;
+            });
+            console.log(vals.quotes);
         });
-        console.log(vals.quotes);
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
