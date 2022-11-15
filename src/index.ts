@@ -32,7 +32,33 @@ async function beolvas(){
           });
           console.log(vals.quotes)
 })
-    
+    const theListBtn = document.getElementById('theBtn')
+    theListBtn?.addEventListener('click' , function listThelist(){
+        let list = document.getElementById('theList');
+        for(let i = 0; vals.quotes.length; i++){
+            var li = document.createElement('li');
+           // let textforlist = vals.quotes[i].author + " " + vals.quotes[i].quote + " " vals.quotes[i].id;
+           // li.innerText = vals.quotes[i];
+            list?.appendChild(li);
+        }
+
+    })
+
+    const hosszListBtn = document.getElementById('hosszBtn')
+    hosszListBtn?.addEventListener('click' , function listLength(){
+       
+
+        let lengthList: number[] = [];
+        
+        for(let i = 0; i <  vals.quotes.length; i++){
+            //console.log(vals.quotes[i])
+            let lengthofcurrent = vals.quotes[i].quote.length;
+            lengthList.push(lengthofcurrent);
+        }
+        
+        console.log(lengthList.join());
+    })
+
 }
 
 
